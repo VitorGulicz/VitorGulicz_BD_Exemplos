@@ -1,0 +1,34 @@
+select a.Nome , b.Nome
+from tabela_A as A
+inner join tabela_B as B
+on a.Nome = b.Nome
+
+
+select a.Nome , b.Nome
+from tabela_A as A
+left join tabela_B as B
+on a.Nome = b.Nome
+
+
+select a.Nome , b.Nome
+from tabela_A as A
+right join tabela_B as B
+on a.Nome = b.Nome
+
+
+select a.Nome , b.Nome
+from tabela_A as A
+right join tabela_B as B
+on a.Nome = b.Nome
+
+
+select *
+from branca join preta 
+using (peca,qtde);
+
+
+select Nome_Cliente, Nome_Profissao
+from Cliente1, Profissao where profissao.Cod_Profissao = Cliente1.Cod_Profissao
+
+
+Select distinct * from cliente1 left outer join profissao on cliente1.Cod_Profissao = profissao.Cod_Profissao;
