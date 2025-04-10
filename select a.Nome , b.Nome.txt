@@ -32,3 +32,74 @@ from Cliente1, Profissao where profissao.Cod_Profissao = Cliente1.Cod_Profissao
 
 
 Select distinct * from cliente1 left outer join profissao on cliente1.Cod_Profissao = profissao.Cod_Profissao;
+
+
+select m.nome, c.modelo
+from marcas 
+as m right join carros
+as c on c.marca = m.marca;
+
+
+select * from marcas
+left join carros on marcas.marca = carros.marca
+union
+select * from marcas
+right join carros on marcas.marca = carros.marca where marcas.marca is null;
+
+select nome completo
+from colaborador
+where nome completo like "Fisher%"
+
+select nome completo
+from colaborador
+where upper (nome completo) like "%LE%"
+
+
+select * from colaborador
+where extract(month from Data_Admissao) = 8
+
+
+select * from compra 
+where extract(year from data_compra) =2020
+order by cpf desc
+
+
+select * from compra 
+where extract(year from data_compra) =2020
+order by cpf desc limit 10
+
+
+select * from compra 
+where extract(year from data_compra) =2020
+order by cpf desc limit 5,10
+
+
+select avg(valor) as valor_avg
+from produto 
+
+
+select min(valor) as valor_min
+from produto 
+
+
+select max(valor) as valor_max
+from produto 
+
+
+select sum(valor) as valor_total
+from produto 
+
+
+select count(*) as nr_prod
+from produto 
+
+
+select nr_depto,avg(salario) as "Media salarial por departamento"
+from colaborador
+group by nr_depto
+
+
+select nr_depto,avg(salario) as  salario_avg
+from colaborador
+group by nr_depto 
+having avg(salario) > (select avg(salario) from colaborador)
