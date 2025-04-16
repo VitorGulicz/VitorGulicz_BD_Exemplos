@@ -1,0 +1,1 @@
+select nomevendedor, salariofixo from vendedor order by NomeVendedor
